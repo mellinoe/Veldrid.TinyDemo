@@ -3,12 +3,14 @@
   <PropertyGroup>
     <Configuration Condition="'$(Configuration)' == '' And '$(OS)' != 'Windows_NT'">Ubuntu_Debug</Configuration>
     <Configuration Condition="'$(Configuration)' == ''">Windows_Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">x64</Platform>
+    <ProjectGuid>{7DDD889D-B4DD-45ED-9753-F1F5BBCBBEDE}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <OutputType>Exe</OutputType>
-    <AssemblyName>SampleExe</AssemblyName>
+    <AssemblyName>TinyDemo</AssemblyName>
     <RootNamespace>$(AssemblyName)</RootNamespace>
     <NuGetTargetMoniker>.NETCoreApp,Version=v1.0</NuGetTargetMoniker>
   </PropertyGroup>
@@ -22,7 +24,23 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'OSX_Debug|x64' " />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'OSX_Release|x64' " />
   <ItemGroup>
+    <ProjectReference Include="$(VeldridRoot)\src\Veldrid\Veldrid.csproj" />
     <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="GLSL\fragment.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GLSL\vertex.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="HLSL\fragment.hlsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HLSL\vertex.hlsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

@@ -1,27 +1,14 @@
-# coretemplate
+# Veldrid TinyDemo
 
-This repo provides a barebones template for creating multi-platform applications running on CoreCLR. It links in a small set of build targets which set up a very basic build environment from https://github.com/mellinoe/corebuild.
+This is a minimal, one-file demo program for [Veldrid](https://github.com/mellinoe/veldrid).
 
-#Requirements
-* Visual Studio 2015 Update 3
-* [.NET CLI](https://github.com/dotnet/cli#installers-and-binaries) or NuGet.exe (for restoring NuGet packages)
+# Building
+```
+git clone --recursive https://github.com/mellinoe/veldrid.tinydemo
+cd veldrid.tinydemo
+dotnet restore
+msbuild
+```
 
-# Setup/Build instructions
-First, clone the repo recursively (`git clone --recursive https://github.com/mellinoe/coretemplate <path>`)
-
-Building in VS is easier and more user-friendly, but not necessary.
-
-## Building in VS
-1. Open src/SampleExe/SampleExe.csproj
-2. Select your configuration (Windows, Ubuntu, OSX)
-3. Build
-4. Optionally, set a break point and debug the program
-
-## Building outside VS
-1. run `dotnet restore` to restore the packages for the solution
-2. run `msbuild /p:Configuration=Windows_Debug` (or another configuration, depending on your target OS)
-
-# Build Artifacts
-* The intermediate objects from the build will be placed in ````<root>/bin/obj/<arch>/<platform>_<config>/````
-* The binaries will be placed in ````<root>/bin/<arch>/<platform>_<config>/````
-* Executable projects' bin/ directories will include a full runtime and all library dependencies, ready to be copied to the target platform and run. If you are building on Windows, you can immediately run the <project>.exe file and launch your program on CoreCLR.
+# Running
+`TinyDemo<.exe> [opengl]`
