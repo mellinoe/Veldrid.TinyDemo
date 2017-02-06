@@ -50,7 +50,7 @@ namespace SampleExe
                 rc.SetVertexBuffer(vb);
                 rc.SetIndexBuffer(ib);
                 rc.SetMaterial(material);
-                rc.DrawIndexedPrimitives(Cube.Indices.Length, 0);
+                rc.DrawIndexedPrimitives(Cube.Indices.Length);
 
                 rc.SwapBuffers();
             }
