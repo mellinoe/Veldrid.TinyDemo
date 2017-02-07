@@ -3,7 +3,7 @@
 This is a minimal, one-file demo program for [Veldrid](https://github.com/mellinoe/veldrid).
 
 # Requirements
-This project uses the new MSBuild-based tooling for .NET Core. Please download the tools at 
+This project uses the new MSBuild-based tooling for .NET Core. Please download the tools at https://github.com/dotnet/cli.
 
 # Building
 ```
