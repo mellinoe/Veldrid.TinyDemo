@@ -15,6 +15,7 @@
     <Content Include="*LSL\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <ProjectReference Include="..\..\ext\veldrid\src\Veldrid.StartupUtilities\Veldrid.StartupUtilities.csproj" />
     <ProjectReference Include="..\..\ext\veldrid\src\Veldrid\Veldrid.csproj" />
   </ItemGroup>
 </Project>
