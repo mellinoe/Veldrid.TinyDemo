@@ -1,3 +1,5 @@
+NOTE: This repository contains example code for a legacy version of Veldrid (https://github.com/mellinoe/Veldrid-Legacy/), and is not compatible with the current version. Sample projects for the current version of Veldrid can be found in the [Veldrid Samples](https://github.com/mellinoe/veldrid-samples) repository.
+
 # Veldrid TinyDemo
 
 This is a minimal, one-file demo program for [Veldrid](https://github.com/mellinoe/veldrid).
